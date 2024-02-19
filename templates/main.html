@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>TableX</title>
+</head>
+<body>
+<form method=post enctype=multipart/form-data>
+    <input type=file name=file>
+    <input type=submit value=Upload>
+</form>
+
+{% if tables %}
+{% for key, value in tables.items() %}
+<div class="table-container">
+    {{value}}
+</div>
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
+
